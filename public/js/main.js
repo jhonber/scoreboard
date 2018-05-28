@@ -68,7 +68,7 @@ function make_score (data) {
         tmp.innerHTML = [
           "<figure>",
             "<img src=/images/" + ind.toString() +".png alt='yes' width='30'></img>",
-            "<figcaption>",
+            "<figcaption style='font-size: 14px;'>",
               "(",
               Math.ceil(solved_time / 60),
               ":",
