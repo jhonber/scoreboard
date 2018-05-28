@@ -56,6 +56,7 @@ function make_score (data) {
     time.innerHTML = Math.ceil(cur.time_taken / 60);
     team.appendChild(time);
 
+    var ind = 1;
     for (var j in cur.challenges) {
       var chall = data.models[i].challenges[j];
 
@@ -63,7 +64,7 @@ function make_score (data) {
       var solved_time = data.models[i].challenges[j].time_taken;
       if (solved_time > 0) {
         tmp.innerHTML = [
-          "<img src=/images/1.png alt='yes' width='30'></img>",
+          "<img src=/images/" + ind.toString() +".png alt='yes' width='30'></img>",
           "(",
           Math.ceil(solved_time / 60),
           ":",
@@ -75,6 +76,7 @@ function make_score (data) {
         tmp.innerHTML = " --- ";
       }
       team.appendChild(tmp);
+      ind ++;
     }
 
     table.appendChild(team);
