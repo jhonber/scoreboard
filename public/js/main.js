@@ -58,11 +58,19 @@ function make_score (data) {
       var chall = data.models[i].challenges[j];
 
       var tmp = document.createElement("td");
-      if (data.models[i].challenges[j].time_taken) {
-        tmp.innerHTML = "YES";
+      var solved_time = data.models[i].challenges[j].time_taken;
+      if (solved_time > 0) {
+        tmp.innerHTML = [
+          "<img src=/images/1.png alt='yes' width='30'></img>",
+          "(",
+          Math.ceil(solved_time / 60),
+          ":",
+          data.models[i].challenges[j].submissions - 1,
+          ")"
+        ].join(" ");
       }
       else {
-        tmp.innerHTML = "NO";
+        tmp.innerHTML = " --- ";
       }
       team.appendChild(tmp);
     }
