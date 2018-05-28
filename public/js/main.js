@@ -10,12 +10,17 @@ function get_score (contest_name, limit, cb) {
 }
 
 function make_score (data) {
+  var container = document.createElement("div");
+  container.setAttribute("class", "table-responsive");
+
   var table = document.createElement('table');
   table.setAttribute("id", "scoreTable");
   table.setAttribute("class", "table");
   table.setAttribute("align", "center");
   table.setAttribute("style", "width:95%;");
-  document.body.appendChild(table);
+
+  container.appendChild(table);
+  document.body.appendChild(container);
 
   var col = ['Rank', 'Team', 'Solved', 'Time']
   var challenges = data.models[0].challenges.length;
