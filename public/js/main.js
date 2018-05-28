@@ -13,6 +13,8 @@ function make_score (data) {
   var table = document.createElement('table');
   table.setAttribute("id", "scoreTable");
   table.setAttribute("class", "table");
+  table.setAttribute("align", "center");
+  table.setAttribute("style", "width:95%;");
   document.body.appendChild(table);
 
   var col = ['Rank', 'Team', 'Solved', 'Time']
