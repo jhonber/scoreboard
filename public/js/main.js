@@ -51,12 +51,11 @@ function make_score (data) {
     team.appendChild(solved);
 
     var time = document.createElement("td");
-    time.innerHTML = cur.time_taken;
+    time.innerHTML = Math.ceil(cur.time_taken / 60);
     team.appendChild(time);
 
     for (var j in cur.challenges) {
       var chall = data.models[i].challenges[j];
-      
 
       var tmp = document.createElement("td");
       if (data.models[i].challenges[j].time_taken) {
