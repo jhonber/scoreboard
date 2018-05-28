@@ -26,6 +26,8 @@ function make_score (data) {
 
 
   var title = document.createElement("tr");
+  title.setAttribute("style", "background-color:#a5acc6;");
+
   for (var i = 0; i < col.length; ++i) {
     var cell = document.createElement("th");
     var cur = document.createTextNode(col[i]);
