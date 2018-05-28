@@ -13,6 +13,7 @@ function get_score (contest_name, limit, cb) {
 function make_score (data) {
   var table = document.createElement('table');
   table.setAttribute("id", "scoreTable");
+  table.setAttribute("class", "table");
   document.body.appendChild(table);
 
   var col = ['Rank', 'Team', 'Solved', 'Time']
@@ -36,9 +37,22 @@ function make_score (data) {
   for (var i in data.models) {
     var cur = data.models[i]
     var team = document.createElement("tr");
+
+    var rank = document.createElement("td");
+    rank.innerHTML = cur.rank;
+    team.appendChild(rank);
+
     var name = document.createElement("td");
     name.innerHTML = data.teams[cur.hacker];
     team.appendChild(name);
+
+    var solved = document.createElement("td");
+    solved.innerHTML = cur.solved_challenges;
+    team.appendChild(solved);
+
+    var time = document.createElement("td");
+    time.innerHTML = cur.time_taken;
+    team.appendChild(time);
 
     for (var j in cur.challenges) {
       var chall = data.models[i].challenges[j];
