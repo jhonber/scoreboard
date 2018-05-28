@@ -1,21 +1,6 @@
-// match teams and usernames
-var teams = {
-            'cardona_627': 'Coders',
-            'diegorestrepo68': 'Wrong syntax',
-            'catalinacst': 'UTP - lucas',
-            'yefri_gaitan97': 'Los hijos de Pitágoras',
-            'carojimenez26': 'Never sorry',
-            's_londono': 'Hard Rock',
-            'marclap': 'Legendary team',
-            'kenpo': 'No merce',
-            'andbet050197': 'UTPitos',
-            'jhonber': 'No good one',
-          }
-
-
 // https://www.hackerrank.com/rest/contests/warm-up-maraton-interna-utp/leaderboard?offset=0&limit=10&_=1527445932946
 function get_score (contest_name, limit, cb) {
-  var url = 'https://www.hackerrank.com/rest/contests/' + contest_name + '/leaderboard?offset=0&limit=' + limit;
+  var url = '/score';
   fetch(url)
   .then(function(response) {
     return response.json();
@@ -37,7 +22,6 @@ function make_score (data) {
     col.push(String.fromCharCode(97 + i).toUpperCase());
   }
 
-  console.log(col)
 
   var title = document.createElement("tr");
   for (var i = 0; i < col.length; ++i) {
@@ -48,6 +32,30 @@ function make_score (data) {
   }
 
   table.appendChild(title)
+
+  for (var i in data.models) {
+    var cur = data.models[i]
+    var team = document.createElement("tr");
+    var name = document.createElement("td");
+    name.innerHTML = data.teams[cur.hacker];
+    team.appendChild(name);
+
+    for (var j in cur.challenges) {
+      var chall = data.models[i].challenges[j];
+      
+
+      var tmp = document.createElement("td");
+      if (data.models[i].challenges[j].time_taken) {
+        tmp.innerHTML = "YES";
+      }
+      else {
+        tmp.innerHTML = "NO";
+      }
+      team.appendChild(tmp);
+    }
+
+    table.appendChild(team);
+  }
 }
 
 get_score('warm-up-maraton-interna-utp', '20', function(err, data) {
