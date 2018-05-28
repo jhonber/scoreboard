@@ -1,4 +1,3 @@
-// https://www.hackerrank.com/rest/contests/warm-up-maraton-interna-utp/leaderboard?offset=0&limit=10&_=1527445932946
 function get_score (contest_name, limit, cb) {
   var url = '/score';
   fetch(url)
@@ -37,6 +36,7 @@ function make_score (data) {
   for (var i in data.models) {
     var cur = data.models[i]
     var team = document.createElement("tr");
+    if (!(cur.hacker in data.teams)) continue;
 
     var rank = document.createElement("td");
     rank.innerHTML = cur.rank;
