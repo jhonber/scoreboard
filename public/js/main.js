@@ -66,12 +66,16 @@ function make_score (data) {
       var solved_time = data.models[i].challenges[j].time_taken;
       if (solved_time > 0) {
         tmp.innerHTML = [
-          "<img src=/images/" + ind.toString() +".png alt='yes' width='30'></img>",
-          "(",
-          Math.ceil(solved_time / 60),
-          ":",
-          data.models[i].challenges[j].submissions - 1,
-          ")"
+          "<figure>",
+            "<img src=/images/" + ind.toString() +".png alt='yes' width='30'></img>",
+            "<figcaption>",
+              "(",
+              Math.ceil(solved_time / 60),
+              ":",
+              data.models[i].challenges[j].submissions - 1,
+              ")",
+            "</figcaption>",
+          "</figure>"
         ].join(" ");
       }
       else {
