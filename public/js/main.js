@@ -84,7 +84,10 @@ function make_score (data) {
         ].join(" ");
       }
       else {
-        tmp.innerHTML = " --- ";
+        if (data.models[i].challenges[j].submissions > 0) 
+          tmp.innerHTML = " -" + data.models[i].challenges[j].submissions;
+        else
+          tmp.innerHTML = " --- ";
       }
       team.appendChild(tmp);
       ind ++;
