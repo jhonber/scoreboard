@@ -42,13 +42,14 @@ function make_score (data) {
 
   table.appendChild(title)
 
+  var interna_rank = 1;
   for (var i in data.models) {
     var cur = data.models[i]
     var team = document.createElement("tr");
     if (!(cur.hacker in data.teams)) continue;
 
     var rank = document.createElement("td");
-    rank.innerHTML = cur.rank;
+    rank.innerHTML = interna_rank ++;
     team.appendChild(rank);
 
     var name = document.createElement("td");
