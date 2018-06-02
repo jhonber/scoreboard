@@ -51,10 +51,12 @@ function make_score (data) {
     var rank = document.createElement("td");
     rank.innerHTML = interna_rank ++;
     team.appendChild(rank);
+    rank.setAttribute("style", "font-size: 25px;");
 
     var name = document.createElement("td");
     name.innerHTML = data.teams[cur.hacker];
     team.appendChild(name);
+    name.setAttribute("style", "font-size: 25px;");
 
     var solved = document.createElement("td");
     solved.innerHTML = cur.solved_challenges;
