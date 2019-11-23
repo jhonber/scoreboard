@@ -12,6 +12,20 @@
     "ernesto_montes": "Hijos de Einsten",
     "anmevel10": "NULL Error"
   },
+  "problems": [
+    "Toby and love",
+    "Toby and coins",
+    "Toby and stars",
+    "Toby and primes",
+    "Toby and numbers",
+    "Toby and sheeps",
+    "Toby and candies",
+    "Toby and Sherlock",
+    "Toby and Addition",
+    "Toby And The Mall",
+    "Toby And The Railway Stations",
+    "Toby And The Flowers"
+  ],
   "url_base": "https://www.hackerrank.com/rest/contests/",
   "contest_name": "interna-utp-2018",
   "contestants": "50"
