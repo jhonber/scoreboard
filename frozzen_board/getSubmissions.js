@@ -14,55 +14,64 @@ function download(filename, text) {
   document.body.removeChild(element);
 }
 
-function getData(submissions, cb) {
-  function go (i) {
-    if (i === submissions.length) {
-      cb(null)
-    } else {
-      const cur = submissions[i].childNodes[0]
-        .innerText.split('\n\n')
-      data.push(cur)
-      go(i + 1)
+function getData (submissions) {
+  const process = async () => {
+    for (let i = 0; i < submissions.length; ++i) {
+      let cur
+      await new Promise(resolve => {
+        cur = submissions[i].childNodes[0]
+          .innerText.split('\n\n')
+        resolve()
+      })
+      const time = parseInt(cur[4])
+      if (time >= 0) {
+        data.push(cur)
+      }
     }
   }
-  go(0)
+
+  return new Promise(resolve => {
+    process().then(() => {
+      resolve()
+    })
+  })
 }
 
-function fetchPage(page, cb) {
-  var url = URL + page
-  var newTab = window.open(url, '_blank')
+function fetchPage (page) {
+  return new Promise(resolve => {
+    var url = URL + page
+    var newTab = window.open(url, '_blank')
 
-  newTab.onload = function () {
-    const submissions = newTab.document.getElementsByClassName('judge-submissions-list-view')
-    setTimeout(function () {
-      getData(submissions, function (err) {
-        newTab.close()
-        cb(null)
-      })
-    }, 100)
-  }
+    newTab.onload = function () {
+      const submissions = newTab.document
+        .getElementsByClassName('judge-submissions-list-view')
+
+      setTimeout(function () {
+        getData(submissions).then(() => {
+          newTab.close()
+          resolve()
+        })
+      }, 1000)
+    }
+  })
 }
 
-function fetchAll(total, cb) {
-  function go (i) {
-    if (i === total) {
-      cb(null)
-    } else {
-      const size1 = data.length
-      fetchPage(i, function (err) {
-        const size2 = data.length
-        if (size1 === size2) {
-          cb(null)
-        }
-        go(i + 1)
+function fetchAll (total) {
+  const loop = async () => {
+    for (let i = 1; i < total; ++i) {
+      await new Promise(resolve => {
+        fetchPage(i).then(() => resolve())
       })
     }
   }
-  go(1)
+
+  return new Promise(resolve => {
+    loop().then(() => resolve(data))
+  })
 }
 
-fetchAll(MX, function (err) {
+fetchAll(MX).then((data) => {
   console.log('Ready: ', data)
+  download('data.json', JSON.stringify(data))
 })
 
-download('data.json', JSON.stringify(data))
