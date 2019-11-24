@@ -72,7 +72,6 @@ function generate () {
     let data = JSON.parse( fs.readFileSync( 'data.json' ) )
     let config = JSON.parse( fs.readFileSync( '../config.json' ) )
     let submitions = []
-    console.log( config["teams"] )
     data.forEach(element => {
         if( config["teams"].hasOwnProperty( element[1] ) ) {
             let temp = {}
@@ -84,7 +83,6 @@ function generate () {
             submitions.push( temp )
         }
     });
-    console.log( submitions )
     submitions.forEach(element => {
         ans += "\t<run>\n"
         ans += block( "id", element["id"] )

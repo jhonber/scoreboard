@@ -1,0 +1,170 @@
+{
+    "info": {
+        "contest-id" : 398578,
+        "length": "04:00:00",
+        "scoreboard-freeze-length": "01:00:00",
+        "penalty": 20,
+        "title": "Interna UTP 2019",
+        "short-title": "Interna UTP 2019"
+    },
+    "language": [{
+            "id" : 1,
+            "name" : "C++"
+        }, {
+            "id" : 2,
+            "name" : "Pyhton"
+        }, {
+            "id" : 3,
+            "name" : "pypy2"
+        }, {
+            "id" : 4,
+            "name" : "pypy3"
+        }, {
+            "id" : 5,
+            "name" : "Java"
+        }
+    ],
+    "region": [{
+            "external-id": 3012,
+            "name" : "Pereira"
+        }
+    ],
+    "judgement" : [{
+            "acronym" : "CE",
+            "name" : "Compile Error"
+        }, {
+            "acronym" : "WA",
+            "name" : "Wrong Answer"
+        }, {
+            "acronym" : "AC",
+            "name" : "Accepted"
+        }
+    ],
+    "problem" : [ {
+            "id" : 1,
+            "label" : "A",
+            "name" : "hello"
+        }, {
+            "id" : 2,
+            "label" : "B",
+            "name" : "hello"
+        }, {
+            "id" : 3,
+            "label" : "C",
+            "name" : "hello"
+        }, {
+            "id" : 4,
+            "label" : "D",
+            "name" : "hello"
+        }, {
+            "id" : 5,
+            "label" : "E",
+            "name" : "hello"
+        }, {
+            "id" : 6,
+            "label" : "F",
+            "name" : "hello"
+        }, {
+            "id" : 7,
+            "label" : "G",
+            "name" : "hello"
+        }, {
+            "id" : 8,
+            "label" : "H",
+            "name" : "hello"
+        }, {
+            "id" : 9,
+            "label" : "I",
+            "name" : "hello"
+        }, {
+            "id" : 10,
+            "label" : "J",
+            "name" : "hello"
+        }, {
+            "id" : 11,
+            "label" : "K",
+            "name" : "hello"
+        }, {
+            "id" : 12,
+            "label" : "L",
+            "name" : "hello"
+        }
+    ],
+    "team": [{
+        "id" : 1,
+        "name" : "Dos papis y un marihuano",
+        "nationality" : "COL",
+        "university" : "Universidad Tecnologica Pereira", 
+        "region" : "Pereira",
+        "external-id" : 23411
+    }, {
+        "id" : 2,
+        "name" : "UTP - Beginners",
+        "nationality" : "COL",
+        "university" : "Universidad Tecnologica Pereira", 
+        "region" : "Pereira",
+        "external-id" : 23412
+    }, {
+        "id" : 3,
+        "name" : "Run time error",
+        "nationality" : "COL",
+        "university" : "Universidad Tecnologica Pereira", 
+        "region" : "Pereira",
+        "external-id" : 23413
+    }, {
+        "id" : 4,
+        "name" : "Los Esteban y Diego",
+        "nationality" : "COL",
+        "university" : "Universidad Tecnologica Pereira", 
+        "region" : "Pereira",
+        "external-id" : 23414
+    }, {
+        "id" : 5,
+        "name" : "Lovelace",
+        "nationality" : "COL",
+        "university" : "Universidad Tecnologica Pereira", 
+        "region" : "Pereira",
+        "external-id" : 23415
+    }, {
+        "id" : 6,
+        "name" : "Primiparos",
+        "nationality" : "COL",
+        "university" : "Universidad Tecnologica Pereira", 
+        "region" : "Pereira",
+        "external-id" : 23416
+    }, {
+        "id" : 7,
+        "name" : "El raro +2",
+        "nationality" : "COL",
+        "university" : "Universidad Tecnologica Pereira", 
+        "region" : "Pereira",
+        "external-id" : 23417
+    }, {
+        "id" : 8,
+        "name" : "Falta Equipo",
+        "nationality" : "COL",
+        "university" : "Universidad Tecnologica Pereira", 
+        "region" : "Pereira",
+        "external-id" : 23418
+    }, {
+        "id" : 9,
+        "name" : "Falta Equipo",
+        "nationality" : "COL",
+        "university" : "Universidad Tecnologica Pereira", 
+        "region" : "Pereira",
+        "external-id" : 23419
+    }, {
+        "id" : 10,
+        "name" : "Falta Equipo",
+        "nationality" : "COL",
+        "university" : "Universidad Tecnologica Pereira", 
+        "region" : "Pereira",
+        "external-id" : 23420
+    }],
+    "finalized" : {
+        "last-gold": 1,
+        "last-silver" : 2,
+        "last-bronze" : 3,
+        "comment" : "Finalized by Diego Restrepo"
+    }
+}
