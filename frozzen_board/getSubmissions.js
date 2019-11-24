@@ -1,6 +1,5 @@
 let URL = 'https://www.hackerrank.com/contests/interna-utp-2018/judge/submissions/'
 let data = []
-let duration = 300
 let MX = 33
 
 function download(filename, text) {
@@ -24,8 +23,8 @@ function getData (submissions) {
           .innerText.split('\n\n')
         resolve()
       })
-      const time = parseInt(cur[4])
-      if (time >= 0 && time <= duration) {
+      const duringContest = cur[7]
+      if (duringContest === 'Yes') {
         data.push(cur)
       }
     }
