@@ -73,7 +73,8 @@ function generate () {
     let config = JSON.parse( fs.readFileSync( '../config.json' ) )
     let submitions = []
     data.forEach(element => {
-        if( config["teams"].hasOwnProperty( element[1] ) ) {
+        if( config["teams"].hasOwnProperty( element[1] ) && 
+                teams.hasOwnProperty( config["teams"][element[1]] )) {
             let temp = {}
             temp["id"] = element[2]
             temp["solved"] = element[6] === "1"
