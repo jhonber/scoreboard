@@ -1,8 +1,8 @@
 {
   "teams": {
-    "santiago_ssaa": "LAYER 8",
-    "carojimenez26": "Lovelace",
-    "xteams_hp": "Wrong Syntax",
+    "alejandro_vargas": "Cold brew",
+    "UTP-Beginners": "UTPBeginers",
+    "estecas97": "Los Esteban y Diego",
     "yerikson_clavijo": "Gaman Legion",
     "marclap": "El raro +2",
     "andbet050197": "UTP-Lucas",
@@ -27,6 +27,6 @@
     "Toby And The Flowers"
   ],
   "url_base": "https://www.hackerrank.com/rest/contests/",
-  "contest_name": "interna-utp-2018",
+  "contest_name": "warmup-utp",
   "contestants": "50"
 }
