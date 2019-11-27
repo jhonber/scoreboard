@@ -9,6 +9,21 @@ function get_score (contest_name, limit, cb) {
   });
 }
 
+function buildAC (ind, time, label) {
+  return [
+    "<figure>",
+      "<img src=/images/" + ind.toString() +".png alt='yes' width='30'></img>",
+      "<figcaption style='font-size: 14px;'>",
+        ind ? "(" : "",
+        time,
+        ind ? ":" : "",
+        label,
+        ind ? ")" : "",
+      "</figcaption>",
+    "</figure>"
+  ].join(" ");
+}
+
 function make_score (data) {
   var container = document.createElement("div");
   container.setAttribute("class", "table-responsive");
@@ -72,25 +87,16 @@ function make_score (data) {
 
       var tmp = document.createElement("td");
       var solved_time = data.models[i].challenges[j].time_taken;
+      let labelTries = data.models[i].challenges[j].submissions - 1
       if (solved_time > 0) {
-        tmp.innerHTML = [
-          "<figure>",
-            "<img src=/images/" + ind.toString() +".png alt='yes' width='30'></img>",
-            "<figcaption style='font-size: 14px;'>",
-              "(",
-              Math.ceil(solved_time / 60),
-              ":",
-              data.models[i].challenges[j].submissions - 1,
-              ")",
-            "</figcaption>",
-          "</figure>"
-        ].join(" ");
+        const labelTime = Math.ceil(solved_time / 60)
+        tmp.innerHTML = buildAC(ind, labelTime, labelTries)
       }
       else {
         if (data.models[i].challenges[j].submissions > 0)
-          tmp.innerHTML = " -" + data.models[i].challenges[j].submissions;
+          tmp.innerHTML = buildAC(0, "-", labelTries + 1)
         else
-          tmp.innerHTML = " --- ";
+          tmp.innerHTML = buildAC(0, "---", "")
       }
       team.appendChild(tmp);
       ind ++;
