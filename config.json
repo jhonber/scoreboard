@@ -2,15 +2,14 @@
   "teams": {
     "kevin_tascon": "Dos papis y un marihuano",
     "UTPBeginers": "UTP - Beginners",
-    "?_1": "Run time error",
+    "juan_olarte": "Run time error",
     "estecas97": "Los Esteban y Diego",
     "una_juanita": "Lovelace",
-    "?_3": "Primiparos",
+    "estiven_castro": "Primiparos",
     "alejandro_vargas": "Cold brew",
     "ernesto_montes": "IterandoCiclos",
-    "?_4": "Novatos.com",
-    "?_5": "Falta Equipo"
-
+    "yeison_sanchez": "Novatos.com",
+    "jorge71": "roncorrorrincos"
   },
   "url_base": "https://www.hackerrank.com/rest/contests/",
   "contest_name": "programming-competition-utp-2019",
