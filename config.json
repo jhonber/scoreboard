@@ -1,12 +1,18 @@
 {
   "teams": {
-    "alejandro_vargas": "Cold brew",
-    "UTPBeginers": "UTP-Beginners",
+    "kevin_tascon": "Dos papis y un marihuano",
+    "UTPBeginers": "UTP - Beginners",
+    "?_1": "Run time error",
     "estecas97": "Los Esteban y Diego",
+    "?_2": "Lovelace",
+    "?_3": "Primiparos",
+    "alejandro_vargas": "Cold brew",
     "ernesto_montes": "IterandoCiclos",
-    "kevin_tascon": "Dos papis y un marihuano"
+    "?_4": "Novatos.com",
+    "?_5": "Falta Equipo"
+
   },
   "url_base": "https://www.hackerrank.com/rest/contests/",
-  "contest_name": "warmup-utp",
+  "contest_name": "programming-competition-utp-2019",
   "contestants": "50"
 }
