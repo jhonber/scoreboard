@@ -94,70 +94,70 @@
         "id" : 1,
         "name" : "Dos papis y un marihuano",
         "nationality" : "COL",
-        "university" : "Universidad Tecnologica Pereira", 
+        "university" : "Universidad Tecnologica de Pereira", 
         "region" : "Pereira",
         "external-id" : 23411
     }, {
         "id" : 2,
         "name" : "UTP - Beginners",
         "nationality" : "COL",
-        "university" : "Universidad Tecnologica Pereira", 
+        "university" : "Universidad Tecnologica de Pereira", 
         "region" : "Pereira",
         "external-id" : 23412
     }, {
         "id" : 3,
         "name" : "Run time error",
         "nationality" : "COL",
-        "university" : "Universidad Tecnologica Pereira", 
+        "university" : "Universidad Tecnologica de Pereira", 
         "region" : "Pereira",
         "external-id" : 23413
     }, {
         "id" : 4,
         "name" : "Los Esteban y Diego",
         "nationality" : "COL",
-        "university" : "Universidad Tecnologica Pereira", 
+        "university" : "Universidad Tecnologica de Pereira", 
         "region" : "Pereira",
         "external-id" : 23414
     }, {
         "id" : 5,
         "name" : "Lovelace",
         "nationality" : "COL",
-        "university" : "Universidad Tecnologica Pereira", 
+        "university" : "Universidad Tecnologica de Pereira", 
         "region" : "Pereira",
         "external-id" : 23415
     }, {
         "id" : 6,
         "name" : "Primiparos",
         "nationality" : "COL",
-        "university" : "Universidad Tecnologica Pereira", 
+        "university" : "Universidad Tecnologica de Pereira", 
         "region" : "Pereira",
         "external-id" : 23416
     }, {
         "id" : 7,
-        "name" : "El raro +2",
+        "name" : "Cold brew",
         "nationality" : "COL",
-        "university" : "Universidad Tecnologica Pereira", 
+        "university" : "Universidad Tecnologica de Pereira", 
         "region" : "Pereira",
         "external-id" : 23417
     }, {
         "id" : 8,
-        "name" : "Falta Equipo",
+        "name" : "IterandoCiclos",
         "nationality" : "COL",
-        "university" : "Universidad Tecnologica Pereira", 
+        "university" : "Universidad Catolica de Pereira", 
         "region" : "Pereira",
         "external-id" : 23418
     }, {
         "id" : 9,
-        "name" : "Falta Equipo",
+        "name" : "Novatos.com",
         "nationality" : "COL",
-        "university" : "Universidad Tecnologica Pereira", 
+        "university" : "Universidad Tecnologica de Pereira", 
         "region" : "Pereira",
         "external-id" : 23419
     }, {
         "id" : 10,
         "name" : "Falta Equipo",
         "nationality" : "COL",
-        "university" : "Universidad Tecnologica Pereira", 
+        "university" : "Universidad Tecnologica de Pereira", 
         "region" : "Pereira",
         "external-id" : 23420
     }],
