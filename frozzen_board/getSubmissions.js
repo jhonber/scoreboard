@@ -1,6 +1,6 @@
-let URL = 'https://www.hackerrank.com/contests/interna-utp-2018/judge/submissions/'
+let URL = 'https://www.hackerrank.com/contests/programming-competition-utp-2019/judge/submissions/'
 let data = []
-let MX = 33
+let MX = 26
 
 function download(filename, text) {
   var element = document.createElement('a');
