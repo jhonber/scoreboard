@@ -43,51 +43,51 @@
     "problem" : [ {
             "id" : 1,
             "label" : "A",
-            "name" : "hello"
+            "name" : "Toby el Plomero"
         }, {
             "id" : 2,
             "label" : "B",
-            "name" : "hello"
+            "name" : "Toby y la Libreria"
         }, {
             "id" : 3,
             "label" : "C",
-            "name" : "hello"
+            "name" : "Toby y Las Rutas"
         }, {
             "id" : 4,
             "label" : "D",
-            "name" : "hello"
+            "name" : "Toby el Contador"
         }, {
             "id" : 5,
             "label" : "E",
-            "name" : "hello"
+            "name" : "Toby y el Big Integer"
         }, {
             "id" : 6,
             "label" : "F",
-            "name" : "hello"
+            "name" : "Toby y la posición de fútbol"
         }, {
             "id" : 7,
             "label" : "G",
-            "name" : "hello"
+            "name" : "Toby y GCD"
         }, {
             "id" : 8,
             "label" : "H",
-            "name" : "hello"
+            "name" : "Toby y la Exponenciación"
         }, {
             "id" : 9,
             "label" : "I",
-            "name" : "hello"
+            "name" : "Toby y el premio misterioso"
         }, {
             "id" : 10,
             "label" : "J",
-            "name" : "hello"
+            "name" : "Toby y las Galletas"
         }, {
             "id" : 11,
             "label" : "K",
-            "name" : "hello"
+            "name" : "Toby y el Reloj"
         }, {
             "id" : 12,
             "label" : "L",
-            "name" : "hello"
+            "name" : "Toby y Blondie"
         }
     ],
     "team": [{
