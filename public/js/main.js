@@ -10,18 +10,23 @@ function get_score (contest_name, limit, cb) {
 }
 
 function buildAC (ind, time, label) {
-  return [
-    "<figure>",
-      "<img src=/images/" + ind.toString() +".png alt='yes' width='30'></img>",
+  console.log('time: ', time)
+  const left = ind ? "(" : ""
+  const right = ind ? ")" : ""
+
+  const a = [
+    "<figure style='text-align: center; margin-bottom: 5px; margin: 0px;'>",
+      "<img src=/images/" + ind.toString() + ".png alt='yes' width='30'></img>",
       "<figcaption style='font-size: 14px;'>",
-        ind ? "(" : "",
-        time,
+        left + time.toString(),
         ind ? ":" : "",
-        label,
-        ind ? ")" : "",
+        label.toString() + right,
       "</figcaption>",
     "</figure>"
   ].join(" ");
+
+  console.log('HERE: ', a)
+  return a
 }
 
 function make_score (data) {
@@ -32,7 +37,7 @@ function make_score (data) {
   table.setAttribute("id", "scoreTable");
   table.setAttribute("class", "table");
   table.setAttribute("align", "center");
-  table.setAttribute("style", "width:95%;");
+  table.setAttribute("style", "width: 99%;");
 
   container.appendChild(table);
   document.body.appendChild(container);
@@ -44,9 +49,10 @@ function make_score (data) {
     col.push(String.fromCharCode(97 + i).toUpperCase());
   }
 
+  const centerStyle = "text-align: center; vertical-align: inherit;"
 
   var title = document.createElement("tr");
-  title.setAttribute("style", "background-color:#a5acc6;");
+  title.setAttribute("style", "background-color:#ee4540; text-align: center; padding:10px");
 
   for (var i = 0; i < col.length; ++i) {
     var cell = document.createElement("th");
@@ -66,20 +72,22 @@ function make_score (data) {
     var rank = document.createElement("td");
     rank.innerHTML = interna_rank ++;
     team.appendChild(rank);
-    rank.setAttribute("style", "font-size: 25px;");
+    rank.setAttribute("style", "font-size: 20px;" + centerStyle);
 
     var name = document.createElement("td");
     name.innerHTML = data.teams[cur.hacker];
     team.appendChild(name);
-    name.setAttribute("style", "font-size: 25px;");
+    name.setAttribute("style", "font-size: 20px; font-weight: bold;" + centerStyle);
 
     var solved = document.createElement("td");
     solved.innerHTML = cur.solved_challenges;
     team.appendChild(solved);
+    solved.setAttribute("style", "font-size: 18px; font-weight: bold;" + centerStyle);
 
     var time = document.createElement("td");
     time.innerHTML = Math.ceil(cur.time_taken / 60);
     team.appendChild(time);
+    time.setAttribute("style", "font-size: 18px;" + centerStyle);
 
     var ind = 1;
     for (var j in cur.challenges) {
@@ -94,7 +102,7 @@ function make_score (data) {
       }
       else {
         if (data.models[i].challenges[j].submissions > 0)
-          tmp.innerHTML = buildAC(0, "-", labelTries + 1)
+          tmp.innerHTML = buildAC(0, "", (labelTries + 1) * -1)
         else
           tmp.innerHTML = buildAC(0, "---", "")
       }
